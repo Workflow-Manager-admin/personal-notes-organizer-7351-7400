@@ -21,6 +21,28 @@
   --button-text: #ffffff;
 }
 
+/* App layout grid for sidebar + main */
+.notes-app {
+  min-height: 100vh;
+  background: #F8F9FA;
+  color: #282c34;
+  display: flex;
+  flex-direction: column;
+}
+.notes-body {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  height: calc(100vh - 64px);
+}
+@media (max-width: 800px) {
+  .notes-body {
+    flex-direction: column;
+    height: unset;
+  }
+}
+
+/* Retain legacy styles for .App (old demo) */
 .App {
   text-align: center;
   background-color: var(--bg-primary);
